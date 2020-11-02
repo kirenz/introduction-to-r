@@ -2,9 +2,7 @@
 title: "Introduction to R"
 description: |
   Welcome to the website. I hope you enjoy it!
-output:
-  distill::distill_article:
-    self_contained: false
+site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
