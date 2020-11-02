@@ -23,6 +23,7 @@
 
   <meta property="description" itemprop="description" content="Welcome to the website. I hope you enjoy it!"/>
 
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -1273,8 +1274,199 @@
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:300, 300i&display=swap');
+
+  @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
+
+  body {
+    font-family: "Lato";
+    /*color: #1f1f1f;*/
+    color: #404040;
+    font-size: 16px;
+  }
+
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Serif JP";
+    letter-spacing: 2px;
+    line-height: 2rem; /* increases, so wrapping headers don't overlap */ 
+    color: #ca225e;
+    font-weight: 300;
+  }
+
+  d-title {
+    padding-top: 13rem; /*so that navbar doesn't overlap fixed title */
+  }
+
+  d-title h1,
+  d-article h2 {
+  	font-weight: 300;
+  }
+
+
+  /* --------------Navbar-------------------- */
+
+
+  /* background-image for fade-to-white color of navbar */
+  .distill-site-header{ 
+    padding: 40px 0px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255,255,255,0.5));   
+    background-color: transparent;
+    font-size: 15px;
+    font-family: "Noto Serif JP";
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .distill-site-header .logo img{
+    max-height: 40px; /* Makes logo bigger, default was 20px */
+  }
+
+  /* dropdown navbar color on mobile */
+
+  @media screen and (max-width: 768px){
+    .distill-site-header.responsive {
+        background: rgba(255,255,255,0.99);
+    }
+  }
+
+
+  /* Navbar Links with Animated Hover */ 
+
+
+  .distill-site-header a { /* A normal link in navbar */
+    color: #1f1f1f;
+    display: inline-block; /* This line and line below is so pseudo-element will work later */
+    position: relative; 
+    text-decoration: none;
+    padding-left: 0px; /* overrides default so animation looks Ok */
+    padding-right: 0px; /* overrides default so animation looks Ok */
+    margin: 10px 14px; /* replaces default padding values for margin values */
+  }
+
+
+  .distill-site-header a:hover { /* (unanimated) hover behavior for navbar links */
+    color: #787878;
+    padding-left: 0px; /* overrides default so animation looks Ok */
+    padding-right: 0px; /* overrides default so animation looks Ok */
+    margin: 10px 14px; /* replaces default padding values for margin values */
+  }
+
+  .distill-site-header a:before { /*Creates pseudoelement line under link */
+    background-color: #787878;
+    content: '';
+    height: 1px; 
+    position: absolute;
+    bottom: -1px;
+    transition: width 0.3s ease-in-out; /* animate the width */
+    width: 100%;
+  }
+
+  .distill-site-header a:hover:before {
+    width: 0; /* Shrinks width of pseudoelement to 0 when hovered */
+  }
+
+  /* Makes sure animation does NOT apply to Title or Logo links (or toggle on mobile) */
+
+  .distill-site-header a.title:before, .distill-site-nav a.logo:before, a.nav-toggle:before {
+    display: none;
+  }
+
+  .distill-site-header a.title, .distill-site-nav a.logo {
+    padding: 10px 0px;
+    margin: 10px 14px;
+  }
+
+
+  /* No navbar links on mobile except title and nav-toggle */
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown {
+      display: none;
+    }
+    
+    .distill-site-header a.title, .distill-site-header a.nav-toggle {
+      display: inline-block;
+      padding: 10px 0px;
+      margin: 10px 14px; 
+    }
+  }
+
+  /* -------------Appendix---------------- */
+
+  d-appendix {
+    background-color: #fdf7f9;
+    border-top: none !important;
+    color: #1a162d !important;
+  }
+
+  /* -------------Footer------------------*/
+
+  .distill-site-footer {
+    color: #7e7b88;
+    background-color: #ca225e3d;
+    margin-top: 0px;
+    padding: 50px 20px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 12px;
+    
+  }
+
+  d-byline div.byline.grid div p,
+  d-byline,
+  d-byline p,
+  p.author,
+  p.affiliation,
+  d-byline h3,
+  .d-toc,
+  .d-toc-header,
+  .d-toc ul,
+  d-appendix p {
+  	font-size: 0.9rem;
+  }
+
+  d-appendix h3 + * {
+  	margin-top: 1.5em !important;
+  }
+
+
+  /*----- COLORED LIST BULLET----*/
+
+  d-article ul {
+    list-style: none; /* Remove default bullets */
+  }
+
+  d-article ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #CA225E; /* Change the color */
+    font-weight: normal; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.5em; /* Also needed for space (tweak if needed) */
+    margin-left: -1.5em; /* Also needed for space (tweak if needed) */
+  }
+
+  d-article ul > li > p {
+    display: inline; /* to have content show up next to bullet */
+    line-height: 1.6em;
+  }
+
+  d-article ul > li { /*to add back in space between bullet items that I took away by making p display inline */
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .d-toc ul li::before {
+    content: " ";  /* Remove toc bullets */
+  }
+  </style>
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
@@ -1311,7 +1503,83 @@
 
 
 <div class="d-article">
-
+<h3 class="d-toc-header">Table of Contents</h3>
+<nav class="d-toc" id="TOC">
+<ul>
+<li><a href="#welcome">Welcome</a></li>
+<li><a href="#prework">Prework</a>
+<ul>
+<li><a href="#essential">Essential</a></li>
+<li><a href="#optional">Optional</a></li>
+</ul></li>
+<li><a href="#links">Links</a>
+<ul>
+<li><a href="#slides">Slides</a></li>
+</ul></li>
+<li><a href="#workshops">Workshops</a></li>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
+</ul>
+</nav>
+<hr class="d-toc-separator"/>
+<h2 id="welcome">Welcome</h2>
+<p>Thank you for enrolling in this course! These are the materials for an introductory machine learning short course with tidymodels by Dr. Alison Presmanes Hill.</p>
+<p>This four-hour pre-conference short course will provide a gentle introduction to machine learning with R using the modern suite of predictive modeling packages called <a href="https://tidymodels.org">tidymodels</a>. We will build, evaluate, compare, and tune predictive models. Along the way, we’ll learn about key concepts in machine learning including overfitting, the holdout method, the bias-variance trade-off, ensembling, cross-validation, and feature engineering. Learners will gain knowledge about good predictive modeling practices, as well as hands-on experience using tidymodels packages like <a href="https://tidymodels.github.io/parsnip">parsnip</a>, <a href="https://tidymodels.github.io/rsample">rsample</a>, <a href="https://tidymodels.github.io/recipes/">recipes</a>, <a href="https://tidymodels.github.io/yardstick/">yardstick</a>, <a href="https://tidymodels.github.io/tune/">tune</a>, and <a href="https://tidymodels.github.io/workflows/">workflows</a>.</p>
+<p>The entire course will be recorded and made available to registered R/Medicine 2020 conference participants for replay. To protect the privacy of participants, no breakouts, video feeds, or chats will be recorded. We also request that you refrain from recording or screen-grabbing any part of the course.</p>
+<p><br />
+</p>
+<h2 id="prework">Prework</h2>
+<h3 id="essential">Essential</h3>
+<ul>
+<li>Please sign up for a free RStudio Cloud account here: <a href="https://rstudio.cloud" class="uri">https://rstudio.cloud</a>.</li>
+<li>Install the latest version of <a href="https://zoom.us/download">Zoom</a>.</li>
+<li>Join a pre-course technology check session - details are in the pre-course email.</li>
+<li>We want to provide a welcoming and supportive learning environment for everyone. To help us do so, please take a look at our <a href="https://events.linuxfoundation.org/r-medicine/attend/code-of-conduct/">code of conduct</a>.</li>
+</ul>
+<h3 id="optional">Optional</h3>
+<p>Please tune into class with a laptop that has the following installed:</p>
+<aside>
+On the day of the class, we’ll provide you with a link to an RStudio Cloud project that contains all of the course materials.
+</aside>
+<ul>
+<li><p>A recent version of R (&gt;=3.9.0), which is available for free at <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p></li>
+<li><p>A recent version of RStudio Desktop (&gt;=1.3.0), available for free at <a href="https://www.rstudio.com/download" class="uri">https://www.rstudio.com/download</a> (RStudio Desktop Open Source License)</p></li>
+<li><p>The R packages we will use, which you can install by connecting to the internet, opening RStudio, and running at the command line:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+install.packages(c(&quot;tidyverse&quot;, &quot;tidymodels&quot;, 
+                   &quot;modeldata&quot;, &quot;kknn&quot;, &quot;rpart&quot;,
+                   &quot;rpart.plot&quot;, &quot;rattle&quot;, 
+                   &quot;vip&quot;, &quot;ranger&quot;, &quot;partykit&quot;))</code></pre>
+</div></li>
+</ul>
+<aside>
+We will use the software listed above only as an important backup should there be problems with the classroom server connection.
+</aside>
+<p>I look forward to meeting you,</p>
+<p>Alison</p>
+<p><br />
+</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="http://bit.ly/tmv-rmed2020">RStudio Cloud workspace</a></li>
+</ul>
+<h3 id="slides">Slides</h3>
+<ul>
+<li><a href="slides/00-intro.html">00: Brief intro</a></li>
+<li><a href="slides/rmed01-model.html">01: Build a model</a></li>
+<li><a href="slides/rmed02-workflows.html">02: Build better workflows</a></li>
+<li><a href="slides/rmed03-tune.html">03: Tune better models</a></li>
+</ul>
+<h2 id="workshops">Workshops</h2>
+<p>Upcoming and past offerings:</p>
+<ul>
+<li><a href="https://events.linuxfoundation.org/r-medicine/">R / Medicine 2020 Virtual Conference</a></li>
+<li>Becton, Dickinson and Company, Online</li>
+<li>Children’s Hospital of Philadelphia, Online</li>
+<li><a href="https://conf20-intro-ml.netlify.app/">rstudio::conf 2020</a>, San Francisco, CA, January 27 &amp; 28 Training Days</li>
+</ul>
+<h2 class="appendix" id="acknowledgments">Acknowledgments</h2>
+<p>This is a website made with the <a href="https://rstudio.github.io/distill/">distill package</a> and a custom theme by Alison Hill &amp; <a href="https://desiree.rbind.io/">Desirée De Leon</a>.</p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1323,7 +1591,12 @@
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="updates-and-corrections">Corrections</h3>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/kirenz/introduction-to-r/issues/new">create an issue</a> on the source repository.</p>
+<h3 id="reuse">Reuse</h3>
+<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Source code is available at <a href="https://github.com/kirenz/introduction-to-r">https://github.com/kirenz/introduction-to-r</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
