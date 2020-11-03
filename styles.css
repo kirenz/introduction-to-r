@@ -8,7 +8,7 @@ body {
   font-family: "Lato";
   /*color: #1f1f1f;*/
   color: #404040;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 
@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Noto Serif JP";
   letter-spacing: 2px;
   line-height: 2rem; /* increases, so wrapping headers don't overlap */ 
-  color: #ca225e;
+  color: #D0313C;
   font-weight: 300;
 }
 
@@ -130,7 +130,7 @@ d-appendix {
 
 .distill-site-footer {
   color: #7e7b88;
-  background-color: #ca225e3d;
+  background-color: #d49397f1;
   margin-top: 0px;
   padding: 50px 20px;
   font-size: 13px;
@@ -166,7 +166,7 @@ d-article ul {
 
 d-article ul li::before {
   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #CA225E; /* Change the color */
+  color: #D0313C; /* Change the color */
   font-weight: normal; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1.5em; /* Also needed for space (tweak if needed) */

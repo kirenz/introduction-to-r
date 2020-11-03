@@ -1,0 +1,27 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2020-11-03T08:44:54+01:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Introduction to R",
+      "description": "Make your first steps in R. \n",
+      "author": [
+        {
+          "name": "Jan Kirenz",
+          "url": "https://www.kirenz.com"
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\n\nContents\nWelcome\nGetting Started\nR & RStudio\nRStudio Cloud\nCoding\nPackages\nInspect a dataset\n\nMore resources\nAcknowledgments\n\nWelcome\nThe R programming language is a powerful open source tool for statistics, machine learning and data science. Learning to program in R is quite similar to learning a foreign language. And just as with learning any foreign language you need lots of practice to improve your skills. The purpose of this site is to provide you with helpful resources to get started learning R.\n\nGetting Started\nBefore we can start analyzing data in R, there are some key concepts you need to understand first (Ismay and Kim 2020):\nR & RStudio\nWhat are R and RStudio and how to install them?\n\nInstall a recent version of R and RStudio (Desktop Open Source License)\nRStudio Cloud\nIf you should have troubles installing R or RStudio on your machine you can also use RStudio Cloud at https://rstudio.cloud/.\nRStudio Cloud is a lightweight, cloud-based solution that allows you to use R and RStudio online. Choose the option Get Started for Free and create an account.\nCoding\nHow do I code in R?\nPackages\nWhat are R packages?\nInspect a dataset\nLet’s put everything you’ve learned into practice and take a look at a dataset:\nInspect dataset\nMore resources\n“Nice Teacup Giraffes and Stats” is a series of self-paced interactive statistics modules for beginners by Hasse Walum and Desirée De Leon.\n“Swirl” is an R package that helps you learn R from within R. It’s an interactive course that runs from your R console.\nAcknowledgments\nThis is a website made with the distill package.\n\n\n\nIsmay, Chester, and Albert Y Kim. 2020. Statistical Inference via Data Science: A ModernDive into R and the Tidyverse. CRC Press.\n\n\n\n\n",
+      "last_modified": "2020-11-03T19:52:51+01:00"
+    }
+  ],
+  "collections": []
+}
