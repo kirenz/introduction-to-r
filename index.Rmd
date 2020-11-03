@@ -19,7 +19,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Welcome  
 
-The R programming language is a powerful open source tool for statistics, machine learning and data science. Learning to program in R is quite similar to learning a foreign language. And just as with learning any foreign language you need lots of practice to improve your skills. The purpose of this site is to provide you with helpful resources to get started learning R.   
+The R programming language is a powerful open source tool for statistics, machine learning and data science. In this tutorial, we mainly cover the use of a collection of R packages called the [tidyverse](https://www.tidyverse.org). They are especially designed for data science and share an underlying design philosophy, grammar, and data structures.
+
+Learning to program in R is quite similar to learning a foreign language. And just as with learning any foreign language you need lots of practice to improve your skills. The purpose of this site is to provide you with helpful resources to get started learning R.
+
+
+
+
 
 \
 
@@ -57,6 +63,8 @@ RStudio Cloud is a lightweight, cloud-based solution that allows you to use R an
 Let’s put everything you’ve learned into practice and take a look at a dataset:
 
 * [Inspect dataset](https://moderndive.netlify.app/1-4-nycflights13.html)
+
+
 
 
 ## More resources
