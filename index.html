@@ -91,9 +91,6 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 
   <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
 
-  <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2020-11-03"/>
-  <meta property="article:created" itemprop="dateCreated" content="2020-11-03"/>
   <meta name="article:author" content="Jan Kirenz"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -110,11 +107,16 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 
   <!--/radix_placeholder_meta_tags-->
   
+  <meta name="citation_reference" content="citation_title=Data Science in a Box;citation_publication_date=2020;citation_author=Mine Çetinkaya-Rundel"/>
+  <meta name="citation_reference" content="citation_title=R markdown: The definitive guide;citation_publication_date=2018;citation_publisher=CRC Press;citation_author=Yihui Xie;citation_author=Joseph J Allaire;citation_author=Garrett Grolemund"/>
+  <meta name="citation_reference" content="citation_title=R Markdown Cookbook;citation_publication_date=2020;citation_publisher=CRC Press;citation_author=Yihui Xie;citation_author=Christophe Dervieux;citation_author=Emily Riederer"/>
+  <meta name="citation_reference" content="citation_title=The Tidyverse Cookbook;citation_publication_date=2020;citation_author=Garrett Grolemund"/>
   <meta name="citation_reference" content="citation_title=Statistical Inference via Data Science: A ModernDive into R and the Tidyverse;citation_publication_date=2020;citation_publisher=CRC Press;citation_author=Chester Ismay;citation_author=Albert Y Kim"/>
+  <meta name="citation_reference" content="citation_title=R for data science: import, tidy, transform, visualize, and model data;citation_publication_date=2016;citation_publisher=O’Reilly Media, Inc.;citation_author=Hadley Wickham;citation_author=Garrett Grolemund"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","bibliography","site"]}},"value":[{"type":"character","attributes":{},"value":["Introduction to R"]},{"type":"character","attributes":{},"value":["Make your first steps in R. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Jan Kirenz"]},{"type":"character","attributes":{},"value":["https://www.kirenz.com"]},{"type":"character","attributes":{},"value":["HdM Stuttgart, University of Applied Sciences"]}]}]},{"type":"character","attributes":{},"value":["2020-11-03"]},{"type":"character","attributes":{},"value":["MyCollection.bib"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","bibliography","site"]}},"value":[{"type":"character","attributes":{},"value":["Introduction to R"]},{"type":"character","attributes":{},"value":["Make your first steps in R. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Jan Kirenz"]},{"type":"character","attributes":{},"value":["https://www.kirenz.com"]},{"type":"character","attributes":{},"value":["HdM Stuttgart, University of Applied Sciences"]}]}]},{"type":"character","attributes":{},"value":["MyCollection.bib"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2011,7 +2013,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Introduction to R","description":"Make your first steps in R.","authors":[{"author":"Jan Kirenz","authorURL":"https://www.kirenz.com","affiliation":"HdM Stuttgart, University of Applied Sciences","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-11-03T00:00:00.000+00:00","citationText":"Kirenz, 2020"}
+{"title":"Introduction to R","description":"Make your first steps in R.","authors":[{"author":"Jan Kirenz","authorURL":"https://www.kirenz.com","affiliation":"HdM Stuttgart, University of Applied Sciences","affiliationURL":"#","orcidID":""}]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2042,7 +2044,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 <div class="d-byline">
   Jan Kirenz <a href="https://www.kirenz.com" class="uri">https://www.kirenz.com</a> (HdM Stuttgart, University of Applied Sciences)
   
-<br/>2020-11-03
+
 </div>
 
 <div class="d-article">
@@ -2059,6 +2061,21 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#packages">Packages</a></li>
 <li><a href="#inspect-a-dataset">Inspect a dataset</a></li>
 </ul></li>
+<li><a href="#tidyverse">Tidyverse</a>
+<ul>
+<li><a href="#import-data">Import data</a></li>
+<li><a href="#programming">Programming</a></li>
+<li><a href="#visualize-data">Visualize data</a></li>
+<li><a href="#exploratory-data-analysis">Exploratory data analysis</a></li>
+<li><a href="#transform-data">Transform data</a></li>
+<li><a href="#tidy-data">Tidy data</a></li>
+</ul></li>
+<li><a href="#r-markdown">R Markdown</a>
+<ul>
+<li><a href="#how-it-works">How it works</a></li>
+<li><a href="#learn-markdown">Learn Markdown</a></li>
+<li><a href="#key-concepts">Key concepts</a></li>
+</ul></li>
 <li><a href="#more-resources">More resources</a></li>
 <li><a href="#acknowledgments">Acknowledgments</a></li>
 </ul>
@@ -2066,6 +2083,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <h2 id="welcome">Welcome</h2>
 <p>The R programming language is a powerful open source tool for statistics, machine learning and data science. Learning to program in R is quite similar to learning a foreign language. And just as with learning any foreign language you need lots of practice to improve your skills. The purpose of this site is to provide you with helpful resources to get started learning R.</p>
+<p>We mainly cover the use of a collection of R packages called the <a href="https://www.tidyverse.org">tidyverse</a>, an ecosystem of packages designed with common APIs and a shared philosophy. An R package is simply a bundle of functions, documentation, and data sets. There are about 25 packages in the tidyverse and they are especially designed for data science and share an underlying design philosophy, grammar, and data structures.</p>
 <p><br />
 </p>
 <h2 id="getting-started">Getting Started</h2>
@@ -2083,19 +2101,60 @@ Install a recent version of R and RStudio (Desktop Open Source License)
 <h3 id="packages">Packages</h3>
 <p><a href="https://moderndive.netlify.app/1-3-packages.html">What are R packages</a>?</p>
 <h3 id="inspect-a-dataset">Inspect a dataset</h3>
-<p>Let’s put everything you’ve learned into practice and take a look at a dataset:</p>
-<ul>
-<li><a href="https://moderndive.netlify.app/1-4-nycflights13.html">Inspect dataset</a></li>
-</ul>
+<p><a href="https://moderndive.netlify.app/1-4-nycflights13.html">Inspect a dataset</a></p>
+<h2 id="tidyverse">Tidyverse</h2>
+<h3 id="import-data">Import data</h3>
+<p>Before you can manipulate data with R, you need to import the data into R’s memory, or build a connection to the data that R can use to access the data remotely <span class="citation" data-cites="Grolemund2020">(Grolemund <a href="#ref-Grolemund2020" role="doc-biblioref">2020</a>)</span>:</p>
+<p><a href="https://rstudio-education.github.io/tidyverse-cookbook/import.html">Import data</a></p>
+<h3 id="programming">Programming</h3>
+<p><a href="https://rstudio-education.github.io/tidyverse-cookbook/program.html">Program</a></p>
+<h3 id="visualize-data">Visualize data</h3>
+<p><a href="https://rstudio-education.github.io/tidyverse-cookbook/visualize-data.html">Visualize data</a></p>
+<h3 id="exploratory-data-analysis">Exploratory data analysis</h3>
+<p>This book chapter will show you how to use visualisation and transformation to explore your data in a systematic way, a task that statisticians call exploratory data analysis, or EDA for short <span class="citation" data-cites="Wickham2016">(Wickham and Grolemund <a href="#ref-Wickham2016" role="doc-biblioref">2016</a>)</span>:</p>
+<p><a href="https://r4ds.had.co.nz/exploratory-data-analysis.html">Exploratory data analysis</a></p>
+<h3 id="transform-data">Transform data</h3>
+<p>The dplyr package is a part of the tidyverse and provides simple “verbs”, functions that correspond to the most common data manipulation tasks, to help you translate your thoughts into code:</p>
+<p><a href="https://dplyr.tidyverse.org/articles/dplyr.html">Transform data</a></p>
+<h3 id="tidy-data">Tidy data</h3>
+<p>In this chapter, you will learn a consistent way to organise your data in R, an organisation called tidy data <span class="citation" data-cites="Wickham2016">(Wickham and Grolemund <a href="#ref-Wickham2016" role="doc-biblioref">2016</a>)</span>:</p>
+<p><a href="https://r4ds.had.co.nz/tidy-data.html">Tidy data</a></p>
+<h2 id="r-markdown">R Markdown</h2>
+<p>R Markdown provides an authoring framework for data science. You can use a single R Markdown file to both save and execute code, and generate high quality reports that can be shared with an audience <span class="citation" data-cites="Xie2018">(Xie, Allaire, and Grolemund <a href="#ref-Xie2018" role="doc-biblioref">2018</a>)</span>:</p>
+<p><img src="https://player.vimeo.com/video/178485416" /></p>
+<h3 id="how-it-works">How it works</h3>
+<p><a href="https://rmarkdown.rstudio.com/lesson-2.html">How it works</a></p>
+<h3 id="learn-markdown">Learn Markdown</h3>
+<p>Markdown is a simple way to format text that looks great on any device. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know:</p>
+<p><a href="https://commonmark.org/help/">Learn Markdown in 10 minutes</a></p>
+<h3 id="key-concepts">Key concepts</h3>
+<p>In this book chapter, you learn some key concepts about R Markdown<span class="citation" data-cites="Xie2020">(Xie, Dervieux, and Riederer <a href="#ref-Xie2020" role="doc-biblioref">2020</a>)</span>:</p>
+<p><a href="https://bookdown.org/yihui/rmarkdown-cookbook/basics.html">R Markdown basics</a></p>
 <h2 id="more-resources">More resources</h2>
 <p><a href="https://tinystats.github.io/teacups-giraffes-and-statistics/">“Nice Teacup Giraffes and Stats”</a> is a series of self-paced interactive statistics modules for beginners by Hasse Walum and Desirée De Leon.</p>
+<p><a href="https://datasciencebox.org">“Data Science in a Box”</a> focuses on data acquisition and wrangling, exploratory data analysis, data visualization, inference, modelling, and effective communication of results <span class="citation" data-cites="Cetinkaya-Rundel2020">(Çetinkaya-Rundel <a href="#ref-Cetinkaya-Rundel2020" role="doc-biblioref">2020</a>)</span>.</p>
 <p><a href="https://swirlstats.com/students.html">“Swirl”</a> is an R package that helps you learn R from within R. It’s an interactive course that runs from your R console.</p>
 <h2 class="appendix" id="acknowledgments">Acknowledgments</h2>
 <p>This is a website made with the <a href="https://rstudio.github.io/distill/">distill package</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-Cetinkaya-Rundel2020">
+<p>Çetinkaya-Rundel, Mine. 2020. “Data Science in a Box.” <a href="https://datasciencebox.org/">https://datasciencebox.org/</a>.</p>
+</div>
+<div id="ref-Grolemund2020">
+<p>Grolemund, Garrett. 2020. “The Tidyverse Cookbook.” <a href="https://rstudio-education.github.io/tidyverse-cookbook/">https://rstudio-education.github.io/tidyverse-cookbook/</a>.</p>
+</div>
 <div id="ref-ismay2019statistical">
-<p>Ismay, Chester, and Albert Y Kim. 2020. <em>Statistical Inference via Data Science: A ModernDive into R and the Tidyverse</em>. CRC Press.</p>
+<p>Ismay, Chester, and Albert Y Kim. 2020. <em>Statistical Inference via Data Science: A ModernDive into R and the Tidyverse</em>. CRC Press. <a href="https://moderndive.netlify.app">https://moderndive.netlify.app</a>.</p>
+</div>
+<div id="ref-Wickham2016">
+<p>Wickham, Hadley, and Garrett Grolemund. 2016. <em>R for data science: import, tidy, transform, visualize, and model data</em>. O’Reilly Media, Inc. <a href="https://r4ds.had.co.nz/">https://r4ds.had.co.nz/</a>.</p>
+</div>
+<div id="ref-Xie2018">
+<p>Xie, Yihui, Joseph J Allaire, and Garrett Grolemund. 2018. <em>R markdown: The definitive guide</em>. CRC Press. <a href="https://bookdown.org/yihui/rmarkdown/">https://bookdown.org/yihui/rmarkdown/</a>.</p>
+</div>
+<div id="ref-Xie2020">
+<p>Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbook</em>. CRC Press. <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">https://bookdown.org/yihui/rmarkdown-cookbook/</a>.</p>
 </div>
 </div>
 <!--radix_placeholder_article_footer-->

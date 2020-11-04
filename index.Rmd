@@ -6,7 +6,6 @@ author:
   - name: Jan Kirenz
     url: https://www.kirenz.com
     affiliation: HdM Stuttgart, University of Applied Sciences
-date: "`r Sys.Date()`"  
 bibliography: MyCollection.bib
 site: distill::distill_website
 ---
@@ -19,7 +18,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Welcome  
 
-The R programming language is a powerful open source tool for statistics, machine learning and data science. Learning to program in R is quite similar to learning a foreign language. And just as with learning any foreign language you need lots of practice to improve your skills. The purpose of this site is to provide you with helpful resources to get started learning R.   
+The R programming language is a powerful open source tool for statistics, machine learning and data science. Learning to program in R is quite similar to learning a foreign language. And just as with learning any foreign language you need lots of practice to improve your skills. The purpose of this site is to provide you with helpful resources to get started learning R. 
+
+We mainly cover the use of a collection of R packages called the [tidyverse](https://www.tidyverse.org), an ecosystem of packages designed with common APIs and a shared philosophy. An R package is simply a bundle of functions, documentation, and data sets. There are about 25 packages in the tidyverse and they are especially designed for data science and share an underlying design philosophy, grammar, and data structures.
+
 
 \
 
@@ -54,14 +56,79 @@ RStudio Cloud is a lightweight, cloud-based solution that allows you to use R an
 
 ### Inspect a dataset
 
-Let’s put everything you’ve learned into practice and take a look at a dataset:
+[Inspect a dataset](https://moderndive.netlify.app/1-4-nycflights13.html)
 
-* [Inspect dataset](https://moderndive.netlify.app/1-4-nycflights13.html)
+
+## Tidyverse
+
+### Import data
+
+Before you can manipulate data with R, you need to import the data into R’s memory, or build a connection to the data that R can use to access the data remotely [@Grolemund2020]:
+
+[Import data](https://rstudio-education.github.io/tidyverse-cookbook/import.html)
+
+
+### Programming
+
+[Program](https://rstudio-education.github.io/tidyverse-cookbook/program.html)
+
+### Visualize data
+
+
+[Visualize data](https://rstudio-education.github.io/tidyverse-cookbook/visualize-data.html)
+
+### Exploratory data analysis
+
+This book chapter will show you how to use visualisation and transformation to explore your data in a systematic way, a task that statisticians call exploratory data analysis, or EDA for short [@Wickham2016]:
+
+[Exploratory data analysis](https://r4ds.had.co.nz/exploratory-data-analysis.html)
+
+### Transform data
+
+The dplyr package is a part of the tidyverse and provides simple “verbs”, functions that correspond to the most common data manipulation tasks, to help you translate your thoughts into code: 
+
+[Transform data](https://dplyr.tidyverse.org/articles/dplyr.html)
+
+
+### Tidy data
+
+In this chapter, you will learn a consistent way to organise your data in R, an organisation called tidy data [@Wickham2016]:
+
+[Tidy data](https://r4ds.had.co.nz/tidy-data.html)
+
+
+
+## R Markdown
+
+
+R Markdown provides an authoring framework for data science. You can use a single R Markdown file to both
+save and execute code, and generate high quality reports that can be shared with an audience [@Xie2018]:
+
+![](https://player.vimeo.com/video/178485416)
+
+
+### How it works
+
+[How it works](https://rmarkdown.rstudio.com/lesson-2.html)
+
+### Learn Markdown
+
+Markdown is a simple way to format text that looks great on any device. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know:
+
+[Learn Markdown in 10 minutes](https://commonmark.org/help/)
+
+### Key concepts
+
+In this book chapter, you learn some key concepts about R Markdown[@Xie2020]:
+
+[R Markdown basics](https://bookdown.org/yihui/rmarkdown-cookbook/basics.html)
 
 
 ## More resources
 
 ["Nice Teacup Giraffes and Stats"](https://tinystats.github.io/teacups-giraffes-and-statistics/) is a series of self-paced interactive statistics modules for beginners by Hasse Walum and Desirée De Leon.
+
+["Data Science in a Box"](https://datasciencebox.org) focuses on data acquisition and wrangling, exploratory data analysis, data visualization, inference, modelling, and effective communication of results [@Cetinkaya-Rundel2020]. 
 
 
 ["Swirl"](https://swirlstats.com/students.html) is an R package that helps you learn R from within R. It’s an interactive course that runs from your R console.
