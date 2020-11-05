@@ -129,7 +129,6 @@ In this book chapter, you learn some key concepts about R Markdown[@Xie2020]:
 
 
 
-
 ## More resources
 
 ["Nice Teacup Giraffes and Stats"](https://tinystats.github.io/teacups-giraffes-and-statistics/) is a series of self-paced interactive statistics modules for beginners by Hasse Walum and Desirée De Leon.
