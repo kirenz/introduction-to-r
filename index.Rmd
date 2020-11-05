@@ -18,7 +18,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Welcome  
 
-
 The R programming language is a powerful open source tool for statistics, machine learning and data science. Learning to program in R is quite similar to learning a foreign language. And just as with learning any foreign language you need lots of practice to improve your skills. The purpose of this site is to provide you with helpful resources to get started learning R. 
 
 We mainly cover the use of a collection of R packages called the [tidyverse](https://www.tidyverse.org), an ecosystem of packages designed with common APIs and a shared philosophy. An R package is simply a bundle of functions, documentation, and data sets. There are about 25 packages in the tidyverse and they are especially designed for data science and share an underlying design philosophy, grammar, and data structures.
@@ -110,7 +109,9 @@ In this chapter, you will learn a consistent way to organise your data in R, an 
 R Markdown provides an authoring framework for data science. You can use a single R Markdown file to both
 save and execute code, and generate high quality reports that can be shared with an audience [@Xie2018]:
 
-![](https://player.vimeo.com/video/178485416)
+
+<iframe src="https://player.vimeo.com/video/178485416?color=428bca&title=0&byline=0&portrait=0" width="640" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/178485416">What is R Markdown?</a> from <a href="https://vimeo.com/rstudioinc">RStudio, Inc.</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 
 ### How it works
